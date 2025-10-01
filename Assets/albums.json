@@ -24,6 +24,18 @@
         "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
     },
     {
+        "title": "IHSC - Logo Design",
+        "thumb": "Assets/Images/CardImages/IHSC Logo.png",
+        "images": ["Assets/Images/CardImages/IHSC Logo.png","Assets/Images/CardImages/IHSC North.png","Assets/Images/CardImages/IHSC East.png","Assets/Images/CardImages/IHSC South.png","Assets/Images/CardImages/IHSC SWestouth.png"],
+        "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
+    },
+    {
+        "title": "Nomads - Man of the Match Sticker Design",
+        "thumb": "Assets/Images/CardImages/Nomads Sticker 1.png",
+        "images": ["Assets/Images/CardImages/Nomads Sticker 1.png","Assets/Images/CardImages/Nomads Sticker 2.png"],
+        "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
+    },
+    {
         "title": "Sheffield Ice Tigers, Logo Cleanup and Vectorising",
         "thumb": "Assets/Images/CardImages/Sheffield Ice Tigers Logo.png",
         "images": ["Assets/Images/CardImages/Sheffield Ice Tigers Logo.png"],
