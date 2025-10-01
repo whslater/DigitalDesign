@@ -1,4 +1,5 @@
 
+//Album Card Functionality
 
 fetch('https://schwenz.uk/Photos/Assets/albums.json?v=' + Date.now())
   .then(response => {
