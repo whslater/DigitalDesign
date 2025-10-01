@@ -61,9 +61,9 @@ h1 {
 
 #album-list {
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-around;
+  align-content: start;
   gap:0rem;
 }
 
@@ -72,12 +72,13 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1 auto;
+  object-fit: cover;
   z-index: 100;
   color: black;
   box-shadow: 0 2px 8px #0001;
-  height: clamp(200px, calc((100vmin - 2rem)/3), 600px);
-  width: auto;
+  height: auto;
+  width: 20%;
   text-align: center;
   cursor: pointer;
   scale: 1;

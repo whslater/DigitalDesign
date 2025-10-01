@@ -51,8 +51,8 @@
     height: 100vh;
     perspective: 100px;
     transform-style: preserve-3d;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 
   a{

@@ -46,5 +46,17 @@
         "thumb": "Assets/Images/CardImages/Sean Rookie.jpg",
         "images": ["Assets/Images/CardImages/Sean Rookie.jpg","Assets/Images/CardImages/Keeps Rookie.jpg"],
         "desc": "I created the graphics to be used for the Sheffield Ice Tigers Rookie Award Cards, trying to get the EA Special Player Card Asthetic."
-    }
+    },
+    {
+        "title": "Talbot Transfers - Logo Design",
+        "thumb": "Assets/Images/CardImages/TT Logo Orange.png",
+        "images": ["Assets/Images/CardImages/TT Logo Orange.png"],
+        "desc": "I created this Logo for Talbot's Transfers, A new startup company local to my area that was in need of a sophisticated design to use for their marketing."
+    },
+    {
+        "title": "P&A Tanning - Logo Design",
+        "thumb": "Assets/Images/CardImages/P&A Tanning Dark.jpg",
+        "images": ["Assets/Images/CardImages/P&A Tanning Dark.jpg"],
+        "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
+    },
 ]
