@@ -66,6 +66,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: start;
+  justify-content: center;
   flex-shrink: 1;
   gap:0rem;
 }
@@ -79,7 +80,7 @@ h1 {
   z-index: 5;
   color: black;
   box-shadow: 0 2px 8px #0001;
-  max-width: calc(25% - 20px);
+  max-width: clamp(400px, calc(25% - 20px), 800px);
   max-height: clamp(600px,25vw,800px);
   display: inline-flex;
   text-align: center;
