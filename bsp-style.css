@@ -1,0 +1,257 @@
+:root{
+  --logo: url('Assets/Images/SchwenzerLogo1.png');
+  --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
+  --home-icon: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Home-icon.svg");
+}
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-a);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.nav-container{
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.nav-container h1{
+  margin: 0;
+  font-weight: 3000;
+  font-size: clamp(1rem, calc(.1rem + 5vmin), 3rem);
+}
+
+.nav-container {
+  justify-content: center !important;
+}
+
+#instagram-nav{
+  width: clamp(40px, 5vmin, 80px) !important;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-image: var(--instagram-icon);
+  background-size: contain;
+  background-position: center;
+  margin-left: clamp(1px, 2vmin, 40px);
+}
+
+#instagram-nav a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+}
+
+#album-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  gap:0rem;
+}
+
+.album-card {
+  align-items: stretch;
+  background: #e7e7e7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1 / 1;
+  z-index: 100;
+  color: black;
+  box-shadow: 0 2px 8px #0001;
+  height: clamp(200px, calc((100vmin - 2rem)/3), 600px);
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+  scale: 1;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+#album-list > .album-card:nth-child(2n+2){
+  flex-grow: 2 !important;
+}
+
+.album-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.39); 
+  z-index: 50;  
+  > img{
+      filter: brightness(0.3);
+  }
+}
+
+
+
+
+
+.album-card:hover > img {
+  scale:1.025;
+
+}
+
+.album-card > img {
+  scale: 1;
+  transition: all .5s;
+  z-index: 50;
+}
+
+.album-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.album-card {
+  position: relative;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5cqh, 2.5rem);
+}
+
+.album-card:hover > .album-card-title, .album-card.active > .album-card-title {
+  display: block;
+  transition: color cubic-bezier(0.24, 0.59, 1, 1) 3s;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  left:50%;
+  color: #c1c1c1;
+}
+
+.album-card-title {
+  display: none;
+  transform-origin: center;
+  color: #c1c1c100;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1005;
+  width: 80%;
+  text-align: center;  
+  animation-delay: 1s;
+  transition: all cubic-bezier(0.24, 0.59, 1, 1) 3s;
+
+}
+
+
+.album-card-logo{
+  opacity: 50%;
+  background-image: var(--logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 20% !important;
+  max-width: 60px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  bottom: 5%;
+  right: 10%;
+  z-index: 200;
+}
+
+.modal-content h2{
+  font-size: 2rem;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100% - clamp(80px, 200px, 3vh));
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  transform-origin: center;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  
+  background: #fff;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: clamp(400px,40vw,800px);
+  min-height: 100px;
+  height: max-content;
+  box-shadow: 0 6px 32px #0003;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center !important;
+
+}
+
+.modal-content > * {
+  height: max-content;
+  max-height: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin: 20px;
+}
+
+.close {
+  position: absolute;
+  right: .7rem;
+  top: .4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+#modal-links a {
+  display: block;
+  margin: 0 !important;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: #2563eb;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#modal-links a:hover {
+  color: white;
+  background-color: #134ac2;
+  padding: 20px 25px;
+}
+
+#modal-links a:hover {
+  text-decoration: underline;
+}
