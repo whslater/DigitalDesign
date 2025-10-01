@@ -20,6 +20,7 @@
     --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
     --artstation-icon: url("https://www.artstation.com/assets/favicon-c10fd14662b70e922acd8ef17489a45a5f033c8d447a728f29a72e249310f4e2.ico");
     --home-icon: url("https://upload.wikimedia.org/wikipedia/commons/3/34/Home-icon.svg");
+    --email-icon: url("Assets/Images/Branding/envelope.png");
 }
 
 /* --- RESET --- */
@@ -147,13 +148,12 @@
   .email-icon {
     position: absolute;
     margin-right: 3vw;
-    top: 15px; /* Overlaps bottom edge */
-    right: 30px;
-    width: 3vw;
+    right: 3vw;
+    width: 2.5vw;
     height: auto;
     aspect-ratio: 3 / 2;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 40px;
+    min-width: 40px;
     max-height: 150px;
     max-width: 150px;
 
@@ -409,8 +409,8 @@
     background-image: url("Assets/Images/Branding/SchwenzerLogo1.png");
   }
 
-  .email-icon {
-    background-image: url("Assets/Images/Branding/envelope.png");
+  .email-icon{
+    background-image: var(--email-icon);
   }
 
 /* Landscape phones and down */

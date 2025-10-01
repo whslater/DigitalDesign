@@ -30,7 +30,7 @@ body {
 .nav-container h1{
   margin: 0;
   font-weight: 3000;
-  font-size: clamp(1rem, calc(.1rem + 5vmin), 3rem);
+  font-size: clamp(0.8rem, calc(.1rem + 3vmin), 3rem);
 }
 
 .nav-container {
@@ -38,10 +38,18 @@ body {
 }
 
 #instagram-nav{
+    background-image: var(--instagram-icon);
+}
+
+#email{
+    background-image: var(--email-icon);
+}
+
+#instagram-nav{
   width: clamp(40px, 5vmin, 80px) !important;
   height: auto;
   aspect-ratio: 1 / 1;
-  background-image: var(--instagram-icon);
+
   background-size: contain;
   background-position: center;
   margin-left: clamp(1px, 2vmin, 40px);
