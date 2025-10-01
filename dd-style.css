@@ -60,6 +60,8 @@ h1 {
 }
 
 #album-list {
+  width: 95%;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -77,14 +79,21 @@ h1 {
   z-index: 5;
   color: black;
   box-shadow: 0 2px 8px #0001;
-  max-width: 25%;
+  max-width: calc(25% - 20px);
   max-height: clamp(600px,25vw,800px);
   display: inline-flex;
   text-align: center;
   cursor: pointer;
   scale: 1;
+  transition: z-index ;
   transition: all ease-in-out 300ms;
   border-radius: 0px;
+  margin: 10px;
+  > img {
+    scale: 1;
+    transition: all .5s;
+    z-index: 50;
+  }
 }
 
 #album-list > .album-card:nth-child(2n+3){
@@ -96,26 +105,14 @@ h1 {
   z-index: 50;  
   border-radius: 20px;
   > img{
+      scale:1.05;
       filter: brightness(0.3);
       overflow: visible;
       border-radius: 20px;
   }
 }
 
-
-
-
-
-.album-card:hover > img {
-  scale:1.05;
-
-}
-
-.album-card > img {
-  scale: 1;
-  transition: all .5s;
-  z-index: 50;
-}
+.album-card 
 
 .album-thumb {
   position: relative;

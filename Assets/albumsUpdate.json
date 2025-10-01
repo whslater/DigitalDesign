@@ -46,5 +46,36 @@
         "thumb": "Assets/Images/CardImages/Sheffield Ice Tigers PP 3.png",
         "images": ["Assets/Images/CardImages/Sheffield Ice Tigers PP 3.png"],
         "desc": "I created a new Profile Picture for the Sheffield Ice Tigers using photoshop and the vector logo I had created for them."
+    },
+    {
+        "title": "Sheffield Ice Tigers, Social Media Cards",
+        "thumb": "Assets/Images/CardImages/Card Back Tigers.png",
+        "images": ["Assets/Images/CardImages/Card Back Tigers.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Player Award cards, and which will be used for future social media content for the club."
+    },
+    {
+        "title": "Sheffield Ice Tigers, Player Trading Cards - Standard",
+        "thumb": "Assets/Images/CardImages/Player Card Example 1.png",
+        "images": ["Assets/Images/CardImages/Player Card Example 1.png","Assets/Images/CardImages/Player Card Example 2.png","Assets/Images/CardImages/Player Card Example 3.png","Assets/Images/CardImages/Player Card Example 4.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Player Award cards, and which will be used for future social media content for the club."
+    },
+        {
+        "title": "Sheffield Ice Tigers, Player Trading Cards - Legend",
+        "thumb": "Assets/Images/CardImages/Legend Card Example 1.png",
+        "images": ["Assets/Images/CardImages/Legend Card Example 1.png","Assets/Images/CardImages/Legend Card Example 2.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Legend Cards, trying to get the EA Hall of Fame/Retro Player Card Asthetic."
+    },
+    {
+        "title": "Sheffield Ice Tigers, Player Trading Cards - MVP",
+        "thumb": "Assets/Images/CardImages/MVP Card Example 2.png",
+        "images": ["Assets/Images/CardImages/MVP Card Example 2.png","Assets/Images/CardImages/MVP Card Example 1.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers MVP Award Cards, trying to get the EA Special Player Card Asthetic."
+    },
+    {
+        "title": "Sheffield Ice Tigers, Player Trading Cards - Rookie",
+        "thumb": "Assets/Images/CardImages/Sean Rookie.jpg",
+        "images": ["Assets/Images/CardImages/Sean Rookie.jpg","Assets/Images/CardImages/Keeps Rookie.jpg"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Rookie Award Cards, trying to get the EA Special Player Card Asthetic."
     }
+
 ]
