@@ -8,40 +8,28 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
   })
   .then(albums => {
     const albumList = document.getElementById('album-list');
-    albums.forEach((album, i) => {
+    albums.forEach((album, i) => {      
+      var images_html = '<div class = "album-images">'
+      if(album.images.length > 1){
+        
+        album.images.forEach((image, i) => {
+          var image_append= `<img class="album-image" src="${image}" alt="${album.title}" />`;
+          images_html = images_html + "/n" + image_append;
+        });
+      }
+      images_html = images_html + "</div>";
       const card = document.createElement('div');
       card.className = 'album-card';
       card.innerHTML = `
         <div class="album-card-logo"></div>
         <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
         <div class="album-card-title">${album.title}</div>
+        ${images_html}
       `;
+ 
       card.onclick = () => showModal(albums, i);
       albumList.appendChild(card);
     });
-
-    // Modal logic
-    const modal = document.getElementById('album-modal');
-    const closeBtn = document.querySelector('.close');
-    function showModal(albums, idx) {
-      const album = albums[idx];
-      document.getElementById('modal-title').textContent = album.title;
-      document.getElementById('modal-desc').textContent = album.desc;
-      const linksDiv = document.getElementById('modal-links');
-      linksDiv.innerHTML = '';
-      album.links.forEach(link => {
-        const a = document.createElement('a');
-        a.href = link.url;
-        a.target = '_blank';
-        a.textContent = link.label;
-        linksDiv.appendChild(a);
-      });
-      modal.classList.remove('hidden');
-    }
-    closeBtn.onclick = () => modal.classList.add('hidden');
-    modal.onclick = e => {
-      if (e.target === modal) modal.classList.add('hidden');
-    };
   })
   .catch(error => {
     document.getElementById('album-list').innerHTML = `<div style="color:red;text-align:center;">Failed to load albums.</div>`;
