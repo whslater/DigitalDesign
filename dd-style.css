@@ -56,6 +56,11 @@ body {
   justify-content: center !important;
 }
 
+.clear{
+  height:50px;
+  width: 100%;
+}
+
 #instagram-nav{
     background-image: var(--instagram-icon);
 }

@@ -62,6 +62,9 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
       
       albumList.appendChild(card);
     });
+    const clear = document.createElement('div');
+    clear.className = 'clear'
+    albumList.appendChild(clear);
   })
   .catch(error => {
     document.getElementById('album-list').innerHTML = `<div style="color:red;text-align:center;">Failed to load albums.</div>`;
