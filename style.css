@@ -54,7 +54,7 @@
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: scroll;
-    padding: 0px 0px 30px 0px;
+    margin-bottom: 30px;
   }
 
   a{
@@ -897,8 +897,8 @@
   }
 
   .wrapper{
-    top: clamp(40px, 5vh, 3vh);
-    height: calc(100vh - clamp(40px, 3vh, 3vh));
+    top: clamp(60px, 5vh, 3vh);
+    height: calc(100vh - clamp(60px, 3vh, 3vh));
   }
 
   .nav-container {
