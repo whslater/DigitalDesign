@@ -1,4 +1,8 @@
-
+function ScrollIntoViewWithOffset(e, offset){
+  var scroll_top = e.getBoundingClientRect().top + window.pageYOffset - offset
+  console.log("scroll to " + scroll_top)
+  window.scrollTo({top:scroll_top, behaviour: "smooth"});
+}
 //Album Card Functionality
 
 fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
@@ -38,10 +42,8 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
       card.contentDiv = contentDiv;
 
       card.onclick = function(e) {
-        // Prevent bubbling if inner content is clicked
-        if (e.target.closest('.content')) return;
 
-        const isOpen = this.classList.contains('show-content');
+        var isOpen = this.classList.contains('show-content');
         // Close all cards
         document.querySelectorAll('.album-card').forEach(otherCard => {
           otherCard.classList.remove('show-content');
@@ -55,7 +57,9 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
           if (this.contentDiv) this.contentDiv.classList.remove('hidden');
         }
         // If it was open, it is now closed.
+        setTimeout(card.scrollIntoView({behavior:"smooth", block:"center"}), 500);
       };
+      
       albumList.appendChild(card);
     });
   })

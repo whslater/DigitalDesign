@@ -87,8 +87,10 @@ h1 {
 }
 
 #album-list {
-  width: 95%;
-  margin: 20px auto;
+  max-width: clamp(300px, 95%, 1320px);
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -98,7 +100,16 @@ h1 {
   gap:0rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .album-card{
+    max-width: none !important;
+    max-height: none !important;
+    width: 100% !important;
+  }
+}
+ 
 .album-card {
+  scroll-margin-top: 100px;
   align-items: stretch;
   background-size: contain;
   background-repeat: no-repeat;
@@ -107,14 +118,13 @@ h1 {
   z-index: 5;
   color: black;
   box-shadow: 0 2px 8px #0001;
-  max-width: clamp(400px, calc(25% - 20px), 800px);
+  min-width: clamp(250px, 33%, 420px);
+  max-width: clamp(420px, 25%, 800px);
   max-height: clamp(600px,25vw,800px);
   display: block;
   text-align: center;
   cursor: pointer;
   scale: 1;
-  transition: z-index ;
-  transition: all ease-in-out 300ms;
   border-radius: 0px;
   margin: 10px;
   > img {
@@ -279,6 +289,7 @@ h1 {
   display: inline-flex;
   flex-direction: column;
   inset: 5px;
+  min-height: 500px;
 }
 
 

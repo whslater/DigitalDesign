@@ -48,12 +48,13 @@
   .wrapper{
     display: flex;
     position: relative;
-    width: 100w;
+    width: 100vw;
     height: 100vh;
     perspective: 100px;
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: scroll;
+    padding: 0px 0px 30px 0px;
   }
 
   a{
