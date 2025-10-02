@@ -263,12 +263,12 @@ h1 {
   overflow-x: hidden;
   margin: 0 auto;
   height: fit-content;
-  max-height: min(800px, 50cqh);
+  max-height: min(720px, 45cqh);
   >img {
     margin: 4.4% auto;
     height: 98%;
     width: 98%;
-
+    max-height: min(718px, 44.5cqh);
     object-fit: contain;
     align-items: center;
     align-self: center;
