@@ -278,7 +278,7 @@ h1 {
   position: absolute;
   display: inline-flex;
   flex-direction: column;
-  inset: 20px;
+  inset: 5px;
 }
 
 
