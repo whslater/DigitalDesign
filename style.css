@@ -567,8 +567,8 @@
   }
 
   .wrapper{
-    top: clamp(30px, 20vh, 10vh);
-    height: calc(100vh - clamp(30px, 20vh, 10vh));
+    top: clamp(30px, 20vh, 60px);
+    height: calc(100vh - clamp(30px, 20vh, 60px));
     perspective: 100px;
     transform-style: preserve-3d;
   }
