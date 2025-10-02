@@ -134,6 +134,7 @@ h1 {
   position: relative;
   font-weight: 700;
   font-size: clamp(1rem, 2.5cqh, 2.5rem);
+  color: #c1c1c1;
 }
 
 .album-card:hover > .album-card-title, .album-card.active > .album-card-title {
@@ -178,6 +179,73 @@ h1 {
   right: 10%;
   z-index: 200;
 }
+
+.content.hidden {
+  display: none;
+}
+
+.album-thumb.hidden {
+  opacity: 0;
+}
+
+.album-card.album-card.show-content{
+  max-width: 100%;
+}
+
+.album-card.show-content > .content{
+  display: flex;
+}
+
+.album-card.show-content > .content > .album-card-desc{
+  display: block;
+}
+
+.album-card.show-content > .album-card-logo, .album-card.show-content > .album-card-title{
+  display: none;
+}
+
+.album-desc-title{
+  height: 10%;
+  > h1{
+    margin: 10px;
+  }
+}
+.album-images{
+  z-index: 1010;
+  height: calc(60% - 40px);
+  width: 95%;
+  overflow-y: auto;
+  margin: auto;
+  >img {
+    height: 98%;
+    width: auto;
+    object-fit: contain;
+  }
+
+}
+
+.album-card-desc{
+  margin: 10px;
+}
+
+
+.content{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  > alum-images > img{
+    position: relative;
+    display: flex;
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 
 .modal-content h2{
   font-size: 2rem;

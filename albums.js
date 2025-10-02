@@ -9,25 +9,53 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
   .then(albums => {
     const albumList = document.getElementById('album-list');
     albums.forEach((album, i) => {      
-      var images_html = '<div class = "album-images">'
-      if(album.images.length > 1){
-        
-        album.images.forEach((image, i) => {
-          var image_append= `<img class="album-image" src="${image}" alt="${album.title}" />`;
-          images_html = images_html + "/n" + image_append;
-        });
-      }
-      images_html = images_html + "</div>";
+      // Wrap description and images in a .content div
+      let content_html = `
+        <div class="content hidden">
+          <div class="album-desc-title"><h1>${album.title}</h1></div>
+          <div class="album-images">
+            ${
+              album.images && album.images.length > 0
+                ? album.images.map(image => `<img class="album-image" src="${image}" alt="${album.title}" />`).join('')
+                : ''
+            }
+          </div>
+          <div class="album-card-desc">${album.desc ?? ""}</div>
+        </div>
+      `;
       const card = document.createElement('div');
       card.className = 'album-card';
       card.innerHTML = `
         <div class="album-card-logo"></div>
         <img class="album-thumb" src="${album.thumb}" alt="${album.title}" />
         <div class="album-card-title">${album.title}</div>
-        ${images_html}
+        ${content_html}
       `;
- 
-      card.onclick = () => showModal(albums, i);
+      // Get references to elements inside the card
+      const albumThumb = card.querySelector('.album-thumb');
+      const contentDiv = card.querySelector('.content');
+      card.albumThumb = albumThumb;
+      card.contentDiv = contentDiv;
+
+      card.onclick = function(e) {
+        // Prevent bubbling if inner content is clicked
+        if (e.target.closest('.content')) return;
+
+        const isOpen = this.classList.contains('show-content');
+        // Close all cards
+        document.querySelectorAll('.album-card').forEach(otherCard => {
+          otherCard.classList.remove('show-content');
+          if (otherCard.albumThumb) otherCard.albumThumb.classList.remove('hidden');
+          if (otherCard.contentDiv) otherCard.contentDiv.classList.add('hidden');
+        });
+        // Toggle this card
+        if (!isOpen) {
+          this.classList.add('show-content');
+          if (this.albumThumb) this.albumThumb.classList.add('hidden');
+          if (this.contentDiv) this.contentDiv.classList.remove('hidden');
+        }
+        // If it was open, it is now closed.
+      };
       albumList.appendChild(card);
     });
   })
@@ -35,3 +63,27 @@ fetch('https://schwenz.uk/DigitalDesign/Assets/albums.json?v=' + Date.now())
     document.getElementById('album-list').innerHTML = `<div style="color:red;text-align:center;">Failed to load albums.</div>`;
     console.error("Error loading albums.json:", error);
   });
+  
+    // // Modal logic
+    // const modal = document.getElementById('album-modal');
+    // const closeBtn = document.querySelector('.close');
+    // function showModal(albums, idx) {
+    //   const album = albums[idx];
+    //   document.getElementById('modal-title').textContent = album.title;
+    //   document.getElementById('modal-desc').textContent = album.desc;
+    //   const linksDiv = document.getElementById('modal-links');
+    //   linksDiv.innerHTML = '';
+    //   album.links.forEach(link => {
+    //     const a = document.createElement('a');
+    //     a.href = link.url;
+    //     a.target = '_blank';
+    //     a.textContent = link.label;
+    //     linksDiv.appendChild(a);
+    //   });
+    //   modal.classList.remove('hidden');
+    // }
+    // closeBtn.onclick = () => modal.classList.add('hidden');
+    // modal.onclick = e => {
+    //   if (e.target === modal) modal.classList.add('hidden');
+    // };
+
