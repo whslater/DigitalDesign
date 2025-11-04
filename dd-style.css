@@ -118,7 +118,6 @@ h1 {
   object-fit: cover;
   z-index: 5;
   color: black;
-  box-shadow: 0 2px 8px #0001;
   min-width: clamp(250px, 33%, 420px);
   max-width: clamp(420px, 25%, 800px);
   max-height: clamp(600px,25vw,800px);
@@ -126,12 +125,12 @@ h1 {
   text-align: center;
   cursor: pointer;
   scale: 1;
-  border-radius: 0px;
-  margin: 10px;
+  margin: 10px 5px 0px 5px;
   > img {
     scale: 1;
     z-index: 50;
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
+    transition: scale 1s ease;
   }
 }
 
@@ -140,11 +139,12 @@ h1 {
 }
 
 .album-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.39); 
+  box-shadow: 0 0 5px 2px #8f8f8fb9, 0 0 1px 2px #e9e9e9, 0 0 20px 2px #e9e9e93d; 
   z-index: 50;  
   border-radius: 20px;
+
   > img{
-      scale:1.05;
+      scale: 1.1;
       filter: brightness(0.2);
       overflow: visible;
       border-radius: 20px;
@@ -152,20 +152,21 @@ h1 {
 }
 
 .album-thumb {
+  border-radius: 20px;
   position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #141414;
 }
 
 .album-card {
   position: relative;
   font-weight: 700;
   font-size: clamp(1rem, 2.5cqh, 2.5rem);
-  color: #c1c1c1;
+  color: #e0e0e0;
   border-radius: 20px;
   overflow: hidden;
+  transition: all 1s ease;
   
 }
 
@@ -284,11 +285,11 @@ h1 {
 }
 
 .album-images > img:first-child{
-  margin: 0px auto;
+  margin: 0px auto !important;
 }
 
-.album-images > img:nth-child(2){
-  margin-top: 8.8%;
+.album-images > img:nth-child(n+1){
+  margin-top: 20px;
 }
 
 .album-card-desc{
