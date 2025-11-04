@@ -9,10 +9,10 @@
     --greyblue: #4d646a;
     --white: #e9e9e9;
 
-    --hamburger-width: max(25px, calc(10vh - 20px));
+    --hamburger-width: 40px;
     --hamburger-height: calc(var(--hamburger-total-height)/9);
     --hamburger-gap: calc((var(--hamburger-total-height) - (3 * var(--hamburger-height))) / 2);
-    --hamburger-total-height: max(25px, calc(6vh - 30px));
+    --hamburger-total-height: 40px;
     --nav-anim-timing: .5s ease-in-out;
     --font-family-a: "Urbanist", sans-serif;
     --font-family-b: "Aldrich", sans-serif;
@@ -55,6 +55,12 @@
     overflow-x: hidden;
     overflow-y: scroll;
     margin-bottom: 30px;
+  }
+
+  h1, .album-card-title, .album-desc-title{
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
   }
 
   a{
@@ -113,16 +119,18 @@
     background-size: contain;
   }
 
-  #instagram > a{
-    background-image: var(--instagram-icon);
+  #instagram > a, #artstation > a, #email > a{
     background-repeat: no-repeat;
     background-position: right;
   }
 
-  #artstation > a{
-    background-image: var(--artstation-icon);
-    background-repeat: no-repeat;
-    background-position: right;
+  #instagram > a{
+    background-image: var(--instagram-icon);
+  }
+
+  
+  #email > a{
+    background-image: var(--email-icon);
   }
 
   .nav-links a:hover{
@@ -148,11 +156,13 @@
 /* Contact Email Icon*/
   .email-icon {
     position: absolute;
-    margin-right: 3vw;
     right: 3vw;
-    width: 2.5vw;
+    width: clamp(40px, 5vmin, 80px) !important;
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
+    background-image: var(--email-icon);
+    background-size: contain;
+    background-position: center;
     min-height: 40px;
     min-width: 40px;
     max-height: 150px;
@@ -417,6 +427,11 @@
 /* Landscape phones and down */
 @media only screen and (max-width: 480px) {
 
+  .nav-container h1{
+    width: 30%;
+    height: auto;
+  }
+
   .mobile-hidden{
     display: none !important;
   }
@@ -427,7 +442,7 @@
     position: fixed;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 80px;
     min-height: 40px;
     background: var(--black);
     display: flex;
@@ -445,7 +460,7 @@
     flex-direction: column;
     align-items: top;
     justify-content: left;
-    top: 6vh;
+    top: 80px;
     left: 21vw;
     width: 80vw;
     min-height: 90vh;
@@ -526,7 +541,7 @@
     border-radius: 1000px;
     transform-origin: right center;
     opacity: 1;
-    transition: opacity 1s ease-in-out, width .4s, rotate .3s, transform 1s ease;
+    transition: opacity 1s ease-in-out, width .4s, rotate .3s, transform 100ms ease-in-out;
   }
 
   .nav-links-dropdown-button input{
@@ -548,14 +563,14 @@
   .nav-links-dropdown-button:has(input:checked)::before{
     transform: translate(-30%, -20%) rotate(-45deg);
     width: var(--x-width);
-    transition: opacity 1s ease-in-out, width .4s, rotate .3s, transform 1s ease;
+    transition: opacity 2s ease-in-out, width .4s, rotate .3s, transform 100ms ease;
     
   }
 
   .nav-links-dropdown-button:has(input:checked)::after{
     transform: translate(-30%, 80%) rotate(45deg);
     width: var(--x-width);
-    transition: opacity 1s ease-in-out, width .4s, rotate .3s, transform 1s ease;
+    transition: opacity 2s ease-in-out, width .4s, rotate .3s, transform 100ms ease;
     
   }
 
