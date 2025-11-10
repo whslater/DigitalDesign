@@ -26,14 +26,14 @@
     {
         "title": "IHSC - Logo Design",
         "thumb": "Assets/Images/CardImages/IHSC Logo.png",
-        "images": ["Assets/Images/CardImages/IHSC Logo.png","Assets/Images/CardImages/IHSC North.png","Assets/Images/CardImages/IHSC East.png","Assets/Images/CardImages/IHSC South.png","Assets/Images/CardImages/IHSC West.png"],
-        "desc": "I created new logos for the Ice Hockey Summer Classic League, with matching logos for all 4 Divisions and a main logo encompassing all 4 colours."
+        "images": ["Assets/Images/CardImages/IHSC Logo.png","Assets/Images/CardImages/IHSC North.png","Assets/Images/CardImages/IHSC East.png","Assets/Images/CardImages/IHSC South.png","Assets/Images/CardImages/IHSC SWestouth.png"],
+        "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
     },
     {
         "title": "Nomads - Man of the Match Sticker Design",
         "thumb": "Assets/Images/CardImages/Nomads Sticker 1.png",
         "images": ["Assets/Images/CardImages/Nomads Sticker 1.png","Assets/Images/CardImages/Nomads Sticker 2.png"],
-        "desc": "I created these sticker designs for the Pollington Nomads IHC. These will be used for future games and MOM winners."
+        "desc": "I created this Logo for P&A Tanning , A new company local to my area that was in need of a rework and expansion of a painting she provided, I extended and cleaned up the original painting, adding feet and replacing the items in their hands, as well as creating the lettering."
     },
     {
         "title": "Sheffield Ice Tigers - Logo Cleanup and Vectorising",
@@ -46,5 +46,36 @@
         "thumb": "Assets/Images/CardImages/Sheffield Ice Tigers PP 3.png",
         "images": ["Assets/Images/CardImages/Sheffield Ice Tigers PP 3.png"],
         "desc": "I created a new Profile Picture for the Sheffield Ice Tigers using photoshop and the vector logo I had created for them."
+    },
+    {
+        "title": "Sheffield Ice Tigers - Social Media Cards",
+        "thumb": "Assets/Images/CardImages/Card Back Tigers.png",
+        "images": ["Assets/Images/CardImages/Card Back Tigers.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Player Award cards, and which will be used for future social media content for the club."
+    },
+    {
+        "title": "Sheffield Ice Tigers - Player Trading Cards - Standard",
+        "thumb": "Assets/Images/CardImages/Player Card Example 1.png",
+        "images": ["Assets/Images/CardImages/Player Card Example 1.png","Assets/Images/CardImages/Player Card Example 2.png","Assets/Images/CardImages/Player Card Example 3.png","Assets/Images/CardImages/Player Card Example 4.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Player Award cards, and which will be used for future social media content for the club."
+    },
+        {
+        "title": "Sheffield Ice Tigers - Player Trading Cards - Legend",
+        "thumb": "Assets/Images/CardImages/Legend Card Example 1.png",
+        "images": ["Assets/Images/CardImages/Legend Card Example 1.png","Assets/Images/CardImages/Legend Card Example 2.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Legend Cards, trying to get the EA Hall of Fame/Retro Player Card Asthetic."
+    },
+    {
+        "title": "Sheffield Ice Tigers - Player Trading Cards - MVP",
+        "thumb": "Assets/Images/CardImages/MVP Card Example 2.png",
+        "images": ["Assets/Images/CardImages/MVP Card Example 2.png","Assets/Images/CardImages/MVP Card Example 1.png"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers MVP Award Cards, trying to get the EA Special Player Card Asthetic."
+    },
+    {
+        "title": "Sheffield Ice Tigers - Player Trading Cards - Rookie",
+        "thumb": "Assets/Images/CardImages/Sean Rookie.jpg",
+        "images": ["Assets/Images/CardImages/Sean Rookie.jpg","Assets/Images/CardImages/Keeps Rookie.jpg"],
+        "desc": "I created the graphics to be used for the Sheffield Ice Tigers Rookie Award Cards, trying to get the EA Special Player Card Asthetic."
     }
+
 ]
