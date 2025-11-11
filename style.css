@@ -3,7 +3,7 @@
     --darkyellow: #c58b18;
     --lightyellow: #fcbf47;
     --verylightyellow: #f3e0ba;
-    --black : #0a0905;
+    --black : #000000;
     --blackAlpha: #181106be;
     --lightgrey: #6c7a75;
     --greyblue: #4d646a;
@@ -16,6 +16,7 @@
     --nav-anim-timing: .5s ease-in-out;
     --font-family-a: "Urbanist", sans-serif;
     --font-family-b: "Aldrich", sans-serif;
+    --darkbackground: url("Assets/Images/darkwall.jpg");
     --dark-gradiant: radial-gradient(circle,rgba(59, 65, 66, 1) 0%, rgba(51, 50, 50, 1) 50%, rgba(28, 28, 28, 1)  100%);
     --instagram-icon: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/256px-Instagram_icon.png?20200512141346");
     --artstation-icon: url("https://www.artstation.com/assets/favicon-c10fd14662b70e922acd8ef17489a45a5f033c8d447a728f29a72e249310f4e2.ico");
@@ -41,7 +42,7 @@
     height: 100vh;
     font-family:  var(--font-family-a);
     color: var(--white);
-    background: var(--dark-gradiant) /* rgb(56, 56, 56) */;
+    background: var(--darkbackground) /* rgb(56, 56, 56) */;
     letter-spacing: .2rem;
   }
 

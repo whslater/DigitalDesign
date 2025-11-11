@@ -130,7 +130,7 @@ h1 {
     scale: 1;
     z-index: 50;
     transition: all .5s ease-in-out;
-    transition: scale 1s ease;
+    transition: scale 0.2s ease;
   }
 }
 
@@ -166,7 +166,7 @@ h1 {
   color: #e0e0e0;
   border-radius: 20px;
   overflow: hidden;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
   
 }
 
@@ -202,8 +202,8 @@ h1 {
   z-index: 1005;
   width: 80%;
   text-align: center;  
-  animation-delay: 1s;
-  transition: all cubic-bezier(0.24, 0.59, 1, 1) 3s;
+  animation-delay: 0.2s;
+  transition: all cubic-bezier(0.24, 0.59, 1, 1) 1s;
   animation: cardcolor 1s backwards;
 }
 
